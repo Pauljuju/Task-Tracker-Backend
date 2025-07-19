@@ -1,0 +1,64 @@
+BACKEND PROJECT FOR EARLY ENGINEERS (A TRACKER)
+
+1. 🔧 Launch EC2 Instance
+OS: Ubuntu 20.04
+
+Security Group:
+
+Allow port 22 for SSH
+
+Allow port 3000 for web app
+
+Key Pair: Create or use an existing one.
+
+
+2. 🔐 SSH into EC2
+
+
+3. ⚙️ Install Node.js
+
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+check version: node -v
+            npm -v
+
+
+4. 📁 Create Project Directory
+
+mkdir task-tracker
+cd task-tracker
+
+Now run:  npm init -y
+          npm install express
+
+
+5. ✍️ Create server.js  and paste in the below using touch or vi command:
+
+
+// server.js
+const express = require('express');
+const fs = require('fs');
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());
+*****************************************
+*****************************************
+
+
+
+6. 🟢 Run the Server with below command,
+
+node server.js
+
+Visit: http://your-ec2-public-ip:3000/tasks but input your publicIP at "your-EC2-pub"
+
+Finally, Backend output should appear in a form of "pretty print", a readaable format.
+
+
+
+NOTE: THATS A BACKEND OUTPUT - HAPPY LEARNING -
+
+
+
